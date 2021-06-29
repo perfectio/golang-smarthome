@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  app:
+    image: golang:1.6.1-alpine
+    volumes:
+      - .:/go/src/golang-smarthome
+    working_dir: /go/src/golang-smarthome
+    command: go run main.go

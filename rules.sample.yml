@@ -1,0 +1,14 @@
+devices:
+  -
+    name: button
+    endponts:
+      event: zigbee2mqtt/0x10153d0001262401
+  -
+    name: socket
+    endponts:
+      action: cmnd/tasmota_39EC42/POWER
+
+rules:
+  -
+    when: button::click
+    do: socket::ON
