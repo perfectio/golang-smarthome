@@ -2,8 +2,11 @@ version: "2"
 
 services:
   app:
-    image: golang:1.6.1-alpine
+    image: golang:1.18
+    env_file:
+      - .env
     volumes:
       - .:/go/src/golang-smarthome
     working_dir: /go/src/golang-smarthome
-    command: go run main.go
+    command: go run cmd/golang-smarthome/main.go
+    #command: "sleep infinity"
